@@ -9,6 +9,7 @@ ENV JAVA_HOME=/usr/lib/jvm/default-jvm/jre
 # https://help.sonatype.com/repomanager3/download/download-archives---repository-manager-3
 
 # nexus
+ARG NEXUS_VERSION
 ENV NEXUS_VERSION $NEXUS_VERSION
 ENV NEXUS_DOWNLOAD_URL "https://download.sonatype.com/nexus/3"
 ENV NEXUS_TARBALL_URL "${NEXUS_DOWNLOAD_URL}/nexus-${NEXUS_VERSION}-unix.tar.gz"
