@@ -36,10 +36,10 @@ jobs:
           NEXUS_VERSION: "3.57.0-01"
         with:
           context: .
-          build-args: NEXUS_VERSION=$NEXUS_VERSION
+          build-args: NEXUS_VERSION=${{env.NEXUS_VERSION}}
           tags: |
             dakotakae/docker-nexus:latest
-            dakotakae/docker-nexus:$NEXUS_VERSION
+            dakotakae/docker-nexus:${{env.NEXUS_VERSION}}
           push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Image digest
