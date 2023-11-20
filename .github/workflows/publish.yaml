@@ -33,7 +33,7 @@ jobs:
       - name: Build image and push to Docker Hub and GitHub Container Registry
         uses: docker/build-push-action@v2
         env:
-          NEXUS_VERSION: "3.57.0-01"
+          NEXUS_VERSION: "3.62.0-01"
         with:
           context: .
           build-args: NEXUS_VERSION=${{env.NEXUS_VERSION}}
